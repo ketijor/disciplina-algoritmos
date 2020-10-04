@@ -11,26 +11,30 @@ var
 
 inicio
 
+      contador <- 4
+      mintemp <- 10
+      recmin <- 1
+      maxtemp <- 24
+      recmax <- 1
+      
+      para contador <- 4 ate 9 faca [passo 1]
+
+      escreval ("")
       escreval ("Olá, Maria! Qual foi seu placar de hoje?")
       leia (placar)
       
-      contador <- 4
       se (placar < 1000) E (placar >= 0) entao
          contador <- contador + 1
          escreval ("Jogo: ",contador)
          escreval ("Placar: ",placar)
 
-         mintemp <- 10
-         recmin <- 1
          se placar < mintemp entao
             mintemp <- placar
             recmin <- recmin + 1
          fimse
          escreval ("Mínimo da temporada: ",mintemp)
          escreval ("Quebra recorde mín: ",recmin)
-      
-         maxtemp <- 24
-         recmax <- 1
+
          se placar > maxtemp entao
             maxtemp <- placar
             recmax <- recmax + 1
@@ -38,5 +42,7 @@ inicio
          escreval ("Máximo da temporada: ",maxtemp)
          escreval ("Quebra recorde máx: ",recmax)
       fimse
+      
+      fimpara
 
 fimalgoritmo
